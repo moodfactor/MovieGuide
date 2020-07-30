@@ -2,7 +2,6 @@ package com.esoxjem.movieguide;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
 import com.squareup.moshi.Json;
 
 public class Movie implements Parcelable {

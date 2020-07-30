@@ -28,7 +28,7 @@ class MovieDetailsInteractorImpl implements MovieDetailsInteractor {
 
     @Override
     public Observable<List<Review>> getReviews(final String id) {
-        return tmdbWebService.reviews(id).map(ReviewsWrapper::getReviews);
+        return tmdbWebService.reviews(id).map(reviewsWrapper -> reviewsWrapper.getReviews());
     }
 
 }

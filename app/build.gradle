@@ -27,7 +27,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        buildConfigField "String", "TMDB_API_KEY", "\"${getProperty("local.properties", "tmdb_api_key")}\""
+        buildConfigField "String", "TMDB_API_KEY", "\"${getProperty("local.properties", "dcd02fb2a9c8db285f2a239c51de4ec1")}\""
         buildConfigField "String", "TMDB_BASE_URL", "\"https://api.themoviedb.org/\""
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -63,6 +63,8 @@ ext {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation "androidx.appcompat:appcompat:1.1.0"
+
     //Support
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
@@ -86,9 +88,9 @@ dependencies {
     // Other
     implementation 'net.jcip:jcip-annotations:1.0'
     implementation 'com.google.guava:guava:18.0'
-    implementation 'com.squareup.moshi:moshi:1.9.2'
+    implementation 'com.squareup.moshi:moshi:1.9.3'
     implementation 'com.jakewharton:butterknife:10.2.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+  annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
 
     // Dependency Injection
     annotationProcessor "com.google.dagger:dagger-compiler:${daggerVersion}"
